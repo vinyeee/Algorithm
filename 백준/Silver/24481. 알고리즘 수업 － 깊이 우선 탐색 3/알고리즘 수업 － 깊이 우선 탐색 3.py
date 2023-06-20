@@ -1,23 +1,32 @@
 import sys
-sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
-n,m,r=map(int,input().split())
-graph=[[] for _ in range(n+1)]
-visited=[-1]*(n+1)
-for _ in range(m):
-    a,b=map(int,input().split())
-    graph[a].append(b)
-    graph[b].append(a)
+sys.setrecursionlimit(300000)
 
-def dfs(r,depth):
-	#01
-    visited[r]=depth
-    graph[r].sort()
-    for i in graph[r]:
-    	#02
-        if visited[i]==-1:
-            dfs(i,depth+1)
-#03
-dfs(r,0)
-for i in visited[1:]:
-    print(i)
+N,M,R = map(int,input().split())
+graph = [[] for _ in range(N+1)]
+
+cnt = 0
+chk = [-1] * (N+1)
+
+for _ in range(M): #간선 개수만큼 받아들임
+    u,v = map(int,input().split())
+    graph[u].append(v)
+    graph[v].append(u)
+
+
+def dfs(now,depth): #현재 방문 노드, 깊이
+    chk[now] = depth # 방문확인 노드에 깊이 저장 
+    
+    for nxt in graph[now]:
+        if(chk[nxt] == -1):
+            dfs(nxt,depth + 1)
+
+   
+
+
+for i in range(1,N+1): #인접 리스트를 정렬
+    graph[i].sort()
+dfs(R,0)
+
+for i in range(1,N+1):
+    print(chk[i])
