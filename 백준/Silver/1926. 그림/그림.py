@@ -31,14 +31,14 @@ def bfs(i,j):
     return size
 
 max_size = 0
-cnt = [] #그림 갯수 
+cnt = 0 #그림 갯수 
 for i in range(n):
     for j in range(m):
         if paper[i][j] == 1 and not visited[i][j]:
             size = bfs(i,j)
-            cnt.append(size)
+            cnt += 1
             max_size = max(max_size, size)
 
 
-print(len(cnt))
+print(cnt)
 print(max_size)
