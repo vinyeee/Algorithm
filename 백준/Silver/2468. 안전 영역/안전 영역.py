@@ -55,7 +55,7 @@ def count_safe_area(graph):
     return count
 
 max_count = 0
-for i in range(0,100):
+for i in range(0,max_h):
     max_count = max(count_safe_area(safe_area(i)), max_count) 
 
 print(max_count)
