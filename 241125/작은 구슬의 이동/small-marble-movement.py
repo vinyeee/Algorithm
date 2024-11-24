@@ -21,8 +21,8 @@ for i in range(t): #t초 동안 움직임
     ny, nx = r + dy[move_dir] , c + dx[move_dir] #시작 위치에서 d방향에 따라 다음 좌표 결정
     if not in_range(ny, nx):# 다음 좌표가 격자 내에 존재하지 않으면 
         move_dir = 3 - move_dir #방향을 바꿈
-        continue
-    r,c = ny, nx #이동 
+    else:
+        r,c = ny, nx #이동 
 print(r,c)   
     
 
