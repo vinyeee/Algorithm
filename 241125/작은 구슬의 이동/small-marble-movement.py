@@ -1,33 +1,26 @@
-# 입력 받기
-n, t = map(int, input().split())  # 그리드 크기 n과 시간 t 입력
-r, c, d = input().split()         # 초기 위치 r, c와 방향 d 입력
-r = int(r)
-c = int(c)
+import sys
+input = sys.stdin.readline
 
-# 방향에 따른 이동 좌표 설정
-direction_map = {
-    'U': (-1, 0),  # 위
-    'D': (1, 0),   # 아래
-    'L': (0, -1),  # 왼쪽
-    'R': (0, 1)    # 오른쪽
-}
+n, t = map(int, input().split())
+r,c,d = map(str, input().split()) # 문자 숫자 섞여있을 땐 str 로 받기
+r,c = int(r), int(c)
 
-# 현재 방향의 행과 열 변화량
-dr, dc = direction_map[d]
 
-# t초 동안 시뮬레이션
-for _ in range(t):
-    # 다음 위치 계산
-    nr = r + dr
-    nc = c + dc
-    
-    # 다음 위치가 그리드 내에 있는지 확인
-    if 1 <= nr <= n and 1 <= nc <= n:
-        # 그리드 내에 있으면 이동
-        r, c = nr, nc
+dr = [0, 1, -1 ,0] #방향을 역방향으로 바꿔줘야 할땐 오른,아래,위,왼
+dc = [1, 0, 0, -1]
+
+def in_range(nr,nc):
+    return 1<= nr <= n and 1<= nc <= n
+
+direction_mapper = {'R':0,'D':1,'U':2,'L':3}
+
+
+move_dir = direction_mapper[d] #움직이는 방향
+
+for _ in range(t): #t초 동안 움직임
+    nr, nc = r + dr[move_dir] , c + dc[move_dir] #시작 위치에서 d방향에 따라 다음 좌표 결정
+    if not in_range(nr, nc):# 다음 좌표가 격자 내에 존재하지 않으면 
+        move_dir = 3 - move_dir #방향을 바꿈
     else:
-        # 그리드 밖이면 방향 반전
-        dr, dc = -dr, -dc
-
-# 최종 위치 출력
-print(r, c)
+        r,c = nr, nc #이동 
+print(r,c)   
