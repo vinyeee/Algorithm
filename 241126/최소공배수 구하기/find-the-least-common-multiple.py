@@ -19,5 +19,4 @@ def find_lcm(n,m):
 
 
 
-
 print(find_lcm(n,m))
