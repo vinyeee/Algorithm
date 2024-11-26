@@ -2,6 +2,8 @@ a,b = map(int, input().split())
 
 
 def is_prime(i):
+    if i == 1:
+        return False
     for j in range(2,i):
         if i % j == 0:
             return False
