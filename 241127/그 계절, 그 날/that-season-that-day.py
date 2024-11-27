@@ -3,18 +3,7 @@ y,m,d = map(int, input().split())
 
 
 
-
-
-
-
-
-
-
-
-
-
 def judge_season(m):
-
     if 3 <= m <= 5:
         return "Spring"
     elif 6 <= m <= 8:
@@ -25,8 +14,8 @@ def judge_season(m):
         return "Winter" 
 
 def is_yun_year(y):
-    if y % 4 != 0 :
-        return False
+    # if y % 4 != 0 :
+    #     return False
     if y % 4 == 0 and y % 100 == 0 and y % 400 == 0:
         return True
     if y % 4 == 0 and y % 100 == 0:
