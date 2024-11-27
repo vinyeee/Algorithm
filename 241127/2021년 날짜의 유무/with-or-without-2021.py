@@ -2,10 +2,10 @@ m,d = map(int, input().split())
 
 
 def is_valid_day(m,d):
-    if m == 2 and ( d < 1 or d > 28):
-        return False
-    if m == 8 and ( d < 1 or d > 31):
-        return False
+    if m == 2 and (  1 <= d <= 28 ):
+        return True
+    if m == 8 and ( 1 <= d <= 31):
+        return True
     if m % 2 == 0 and ( d < 1 or d > 30):
         return False
     if m % 2 != 0 and ( d < 1 or d > 31):
