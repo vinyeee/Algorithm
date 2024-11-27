@@ -19,8 +19,8 @@ def is_yun_year(y):
     
 
 def last_day_number(y,m):
-    if is_yun_year(y):
-        if m == 2:
+    if m == 2:
+        if is_yun_year(m):
             return 29
         else:
             return 28
