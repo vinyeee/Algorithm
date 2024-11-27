@@ -23,7 +23,8 @@ def divide(a,b):
 def print_expression(a,o,b):
 
     if o not in ["+", "-", "*", "/"]:
-        return False
+       print(False)
+       return
 
     if o == "+":
         x = add(a,b)
