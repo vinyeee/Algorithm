@@ -14,16 +14,22 @@ def judge_season(m):
         return "Winter" 
 
 def is_yun_year(y):
-    return (y % 4 == 0 and y % 100 != 0) or y % 400 == 0
-    
+    if y % 4 != 0 :
+        return False
+    if y % 4 == 0 and y % 100 == 0 and y % 400 == 0:
+        return True
+    if y % 4 == 0 and y % 100 == 0:
+        return False
+    return False
+        
     
 
 def last_day_number(y,m):
     if is_yun_year(y):
         if m == 2:
-            return 28
-        else:
             return 29
+        else:
+            return 28
     if m == 4 or m == 6 or m == 9 or m == 11:
         return 30 
     else:
