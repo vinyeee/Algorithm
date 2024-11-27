@@ -19,7 +19,7 @@ def divide(a,b):
 if o == "+":
     x = add(a,b)
 elif o == "-":
-    x = minus(a.b)
+    x = minus(a,b)
 elif o == "*":
     x = multiple(a,b)
 elif o == "/":
