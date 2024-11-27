@@ -14,8 +14,17 @@ def judge_season(m):
         return "Winter" 
 
 def is_yun_year(y):
-    return (y % 4 == 0 and y % 100 != 0) or y % 400 == 0
+    if y % 4 != 0:
+        return False
     
+    #여기 까지 왔으면 일단 4의 배수 
+    if y % 100 != 0:
+        return True
+
+    #여기 까지 왔으면 4의 배수 이면서 100의 배수
+    if y % 400 == 0:
+        return True
+    return False
     
 
 def last_day_number(y,m):
