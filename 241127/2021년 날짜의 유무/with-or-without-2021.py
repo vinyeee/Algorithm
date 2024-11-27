@@ -2,13 +2,13 @@ m,d = map(int, input().split())
 
 
 def is_valid_day(m,d):
-    if m == 2 and ( d < 1 and d > 28):
+    if m == 2 and ( d < 1 or d > 28):
         return False
-    if m == 8 and ( d < 1 and d > 31):
+    if m == 8 and ( d < 1 or d > 31):
         return False
-    if m % 2 == 0 and ( d < 1 and d > 30):
+    if m % 2 == 0 and ( d < 1 or d > 30):
         return False
-    if m % 2 != 0 and ( d < 1 and d > 31):
+    if m % 2 != 0 and ( d < 1 or d > 31):
         return False
     return True
 
