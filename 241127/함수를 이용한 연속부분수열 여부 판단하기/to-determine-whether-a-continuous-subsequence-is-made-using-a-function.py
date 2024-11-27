@@ -18,7 +18,7 @@ def is_part_series(a,b):
     return "Yes"
 
 
-if n1 > n2:
+if n1 >= n2:
     print(is_part_series(a, b))
 else:
     print(is_part_series(b, a))
