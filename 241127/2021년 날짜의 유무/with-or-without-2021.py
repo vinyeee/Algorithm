@@ -1,28 +1,28 @@
 m,d = map(int, input().split())
 
 
-def is_valid_day(m,d):
-    if m == 2 and ( d < 1 or d > 28 ):
-        return False
-    if m == 8 and ( 1 <= d <= 31):
+
+
+def last_day_number(m):
+    #2월은 28
+    if m == 2:
+        return 28
+    elif m == 4 or m == 6 or m == 9 or m == 11:
+        return 30
+    else:
+        return 31 
+
+
+
+
+def judge_day(m,d):
+    if m <= 12 and d <= last_day_number(m): #1~12월 이고 해당월의 마지막 날짜 범위 내에 있으면 
         return True
-    if m % 2 == 0 and ( d < 1 or d > 30):
-        return False
-    if m % 2 != 0 and ( d < 1 or d > 31):
-        return False
-    return True
+    return False
 
 
 
-def is_valid_month(m,d):
-
-    if m < 1 or m > 12:
-        return False
-    if not is_valid_day(m,d):
-        return False
-    return True
-
-if is_valid_month(m,d):
+if judge_day(m,d):
     print("Yes")
 else:
     print("No")
