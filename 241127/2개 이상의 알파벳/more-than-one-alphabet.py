@@ -3,13 +3,10 @@ a = input()
 
 
 def have_another_alphabets(string):
-    
-    alphabets = []
+
     for s in string:
-        if s not in alphabets:
-            alphabets.append(s)
-    if len(alphabets) >= 2:
-        return True
+        if s != string[0]:
+            return True
     return False 
 
 
