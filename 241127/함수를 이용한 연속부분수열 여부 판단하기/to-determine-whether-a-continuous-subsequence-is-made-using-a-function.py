@@ -11,6 +11,8 @@ def is_part_series(a,b):
         return "No"
     
     b_idx = 0
+    if idx + n2 > n1:
+        return "No"
     for i in range(idx,idx + len(b)):
         if a[i] != b[b_idx]:
             return "No"
