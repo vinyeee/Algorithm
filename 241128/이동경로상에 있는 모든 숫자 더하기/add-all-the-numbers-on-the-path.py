@@ -22,7 +22,7 @@ for cmd in cmds:
     if cmd == "R":
         move_dir = ( move_dir + 1 ) % 4
 
-    if cmd ==  "L":
+    elif cmd ==  "L":
         move_dir = ( move_dir + 3 ) % 4
     else:
         ny, nx = y + dy[move_dir] , x + dx[move_dir]
