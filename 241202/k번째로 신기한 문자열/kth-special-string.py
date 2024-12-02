@@ -5,7 +5,8 @@ k = int(k)
 
 _list = []
 
-for word in range(n):
+for _ in range(n):
+    word = input()
     if t in word:
         _list.append(word)
 
