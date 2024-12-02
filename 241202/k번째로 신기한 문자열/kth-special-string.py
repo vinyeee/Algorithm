@@ -7,7 +7,7 @@ _list = []
 
 for _ in range(n):
     word = input()
-    if t in word:
+    if t == word[:2]:
         _list.append(word)
 
 _list.sort()
