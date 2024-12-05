@@ -12,7 +12,7 @@ house = list(map(int, input().split()))
 min_distance = INT_MAX
 
 for i in range(n):
-    start = i #i번째 집에 모인다고 가정했을 때 
+    #i번째 집에 모인다고 가정했을 때 
 
     move_distance = 0
     for j in range(n):
