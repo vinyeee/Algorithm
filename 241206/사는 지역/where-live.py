@@ -9,6 +9,7 @@ name = people[0][0]
 idx = 0
 for i in range(1,n):
     if name < people[i][0]:
+        name = people[i][0]
         idx = i
 
 
