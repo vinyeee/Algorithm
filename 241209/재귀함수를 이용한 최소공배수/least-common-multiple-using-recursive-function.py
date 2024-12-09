@@ -25,7 +25,8 @@ def gcd(a,b):
     return a * b // lcm(a,b)
 
 
-gcd_num = gcd(_list[0], _list[1])
-for i in range(2,n):
-    gcd_num = gcd(gcd_num, _list[i])
+gcd_num = _list[0]
+
+for i in range(1,n):
+    gcd_num = gcd(gcd_num,_list[i])
 print(gcd_num)
