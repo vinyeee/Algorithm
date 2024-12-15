@@ -19,7 +19,7 @@ def decimal_to_b(decimal):
         digits.append(str(decimal % b))
         decimal //= b
 
-    num = "".join(digits)
+    num = "".join(digits[::-1])
     return num
 
 
