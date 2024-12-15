@@ -7,8 +7,8 @@ for _ in range(n):
     a += 100
     b += 100
 
-    dots[a] += 1
-    dots[b - 1] += 1
+    for i in range(a, b):
+        dots[i] += 1
 
 print(max(dots))
 
