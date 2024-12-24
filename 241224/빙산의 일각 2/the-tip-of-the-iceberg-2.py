@@ -2,7 +2,7 @@ n = int(input())
 arr = [int(input()) for _ in range(n)]
 
 max_num = 0
-for i in range(1, max(arr)):
+for i in range( max(arr)):
     copy_arr = arr[:]
     for j in range(n):
         copy_arr[j] -= i
