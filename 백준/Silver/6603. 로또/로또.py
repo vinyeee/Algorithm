@@ -1,20 +1,28 @@
-def dfs(depth, idx):
-    if depth == 6:
-        print(*out)
-        return
+import sys
+input = sys.stdin.readline
 
-    for i in range(idx, k):
-        out.append(S[i])
-        dfs(depth + 1, i + 1)
-        out.pop()
+
+
+def combination(cnt, start):
+
+    if cnt == 6:
+        print(" ".join(map(str,result)))
+        return
+    
+    for i in range(start,k):
+        result.append(s[i])
+        combination(cnt + 1, i + 1)
+        result.pop()
+
 
 
 while True:
-    array = list(map(int, input().split()))
-    k = array[0]
-    S = array[1:]
-    out = []
-    dfs(0, 0)
+    k_s = list(map(int, input().strip().split()))
+    k, s = k_s[0], k_s[1:]
+    result = []
     if k == 0:
-        exit()
+        break
+
+    combination(0, 0)
+
     print()
