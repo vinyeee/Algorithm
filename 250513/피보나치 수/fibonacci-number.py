@@ -2,7 +2,7 @@ N = int(input())
 
 # Please write your code here.
 MAX_N = 45
-dp = [-1] * MAX_N
+dp = [-1] * (MAX_N + 1)
 
 dp[1] = 1
 dp[2] = 1
