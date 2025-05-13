@@ -17,6 +17,9 @@ init()
 for i in range(1,n):
     for j in range(0,i):
 
+        if dp[j] == INT_MIN:
+            continue
+            
         if m[i] > m[j]:
             dp[i] = max(dp[i], dp[j] + 1)
 
