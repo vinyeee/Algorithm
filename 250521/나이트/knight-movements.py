@@ -41,7 +41,7 @@ q.append((r1, c1))
 visited[r1][c1] = 1
 bfs()
 
-answer = graph[r2][c2]  if graph[r2][c2] != 0 else -1 #  시작점은 방문했으나 움직인 칸수에는 포함되지 않으므로 1을 빼줘야한다
+answer = graph[r2][c2]  if visited[r2][c2] != 0 else -1 #  시작점은 방문했으나 움직인 칸수에는 포함되지 않으므로 1을 빼줘야한다
 print(answer)  
 
 
