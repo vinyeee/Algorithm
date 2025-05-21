@@ -36,10 +36,10 @@ def bfs():
 
 
 q.append((r1, c1))
-visited[r1][c1] = 1
+visited[r1][c1] = 0
 bfs()
 
-answer = visited[r2][c2] - 1 if visited[r2][c2] != 0 else -1
+answer = visited[r2][c2]  if visited[r2][c2] != 0 else -1
 print(answer)  
 
 
