@@ -29,7 +29,9 @@ def bfs():
             nr, nc = r + dr , c + dc
             if can_go(nr, nc) :
                 q.append((nr,nc))
-                visited[nr][nc] = visited[r][c] + 1
+                visited[nr][nc] = 1
+                graph[nr][nc] = graph[r][c] + 1
+
 
     
 
@@ -39,7 +41,7 @@ q.append((r1, c1))
 visited[r1][c1] = 1
 bfs()
 
-answer = visited[r2][c2] - 1  if visited[r2][c2] != 0 else -1 #  시작점은 방문했으나 움직인 칸수에는 포함되지 않으므로 1을 빼줘야한다
+answer = graph[r2][c2]  if graph[r2][c2] != 0 else -1 #  시작점은 방문했으나 움직인 칸수에는 포함되지 않으므로 1을 빼줘야한다
 print(answer)  
 
 
