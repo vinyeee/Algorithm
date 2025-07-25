@@ -10,7 +10,7 @@ arr = list(map(int, input().split()))
 b = sys.maxsize
 
 for i in range(N):
-    for j in range(1, N):
+    for j in range(i+1, N):
         s = sum(arr) - arr[i] - arr[j] #두 수를 제외한 나머지를 다 더한 값 
         b = min(b, abs(S - s)) # S값과 s값의 차
 
