@@ -15,5 +15,5 @@ for i in range(N):
         diff = abs(S-s)
         min_diff = min(min_diff, diff) # S값과 s값의 차
 
-print(b) 
+print(min_diff) 
         
