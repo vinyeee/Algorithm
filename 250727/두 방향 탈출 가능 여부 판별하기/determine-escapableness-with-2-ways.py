@@ -21,5 +21,5 @@ def dfs(y,x):
 
 dfs(0,0)
 
-ans = 1 if visited[n-1][n-1] else 0 
+ans = 1 if visited[n-1][m-1] else 0 
 print(ans)
