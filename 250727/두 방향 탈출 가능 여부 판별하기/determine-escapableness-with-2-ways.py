@@ -8,7 +8,7 @@ dy = [1,0]
 dx = [0,1]
 
 def in_range(y,x):
-    return 0 <= y < n and 0 <= x < n
+    return 0 <= y < n and 0 <= x < m
 
 def dfs(y,x):
     for i in range(2):
