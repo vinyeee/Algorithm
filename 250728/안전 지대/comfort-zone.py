@@ -6,8 +6,9 @@ k * O(nm)
 2. h_map 에서 안전영역의 개수를 구하기 위해 dfs
 3. 그때의 k와 dfs의 결과를 list 에 저장 safe_zone
 4. k의 최댓값과 , 그때의 안전영역의 개수를 print 
-
 '''
+import sys
+sys.setrecursionlimit(10000)
 
 n, m = map(int, input().split())
 grid = [list(map(int, input().split())) for _ in range(n)]
