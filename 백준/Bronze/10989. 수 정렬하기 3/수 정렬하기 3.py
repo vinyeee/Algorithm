@@ -7,6 +7,6 @@ cnt = [0] * 10001
 for i in range(n):
     cnt[int(input().strip())] += 1
 
-for i in range(1,len(cnt)):
+for i in range(1,10001): 
     for _ in range(cnt[i]):
-        print(i)     
+        print(i)                                                                                                                             
